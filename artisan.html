@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artisan Stories — THEVANDOR</title>
+  <meta name="description" content="Meet the master craftspeople behind THEVANDOR. Discover generations of textile, gemstone, and handicraft heritage." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink:#1e2520;
+      --paper:#fffdf8;
+      --cream:#f5eee3;
+      --sand:#e6d4bc;
+      --terracotta:#bb5637;
+      --leaf:#315b48;
+      --gold:#bd821e;
+      --line:#ded4c5;
+      --shadow:0 18px 45px rgba(61,42,23,.12);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    
+    header { max-width:1280px; margin:auto; padding:20px 32px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+    .brand { display:flex; align-items:center; gap:11px; font-family:"Cormorant Garamond",serif; font-size:28px; font-weight:700; }
+    .brand-mark { width:30px; height:30px; border:2px solid var(--terracotta); border-radius:50% 50% 50% 9px; transform:rotate(-38deg); position:relative; }
+    .brand-mark::after { content:""; position:absolute; inset:7px 5px 5px 8px; border:1px solid var(--gold); border-radius:50%; }
+    nav { display:flex; gap:25px; font-size:14px; }
+    nav a { padding:8px 0; font-weight:500; }
+    nav a:hover, nav a.active { color:var(--terracotta); }
+
+    .hero-artisan { background:var(--cream); padding:70px 32px; text-align:center; }
+    .hero-artisan-inner { max-width:800px; margin:auto; }
+    .eyebrow { color:var(--terracotta); font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; display:block; }
+    h1 { font-family:"Cormorant Garamond",serif; font-size:56px; line-height:1.05; margin:0 0 20px; }
+    .hero-artisan p { font-size:18px; color:#526057; max-width:640px; margin:auto; }
+
+    main { max-width:1100px; margin:60px auto; padding:0 32px; }
+    
+    .artisan-card { display:grid; grid-template-columns:1fr 1.1fr; gap:48px; align-items:center; margin-bottom:80px; padding-bottom:80px; border-bottom:1px solid var(--line); }
+    .artisan-card:nth-child(even) { grid-template-columns:1.1fr 1fr; }
+    .artisan-card:nth-child(even) .artisan-img-wrapper { order:2; }
+    
+    .artisan-img-wrapper { position:relative; border-radius:4px; overflow:hidden; box-shadow:var(--shadow); }
+    .artisan-img-wrapper img { width:100%; height:450px; object-fit:cover; display:block; }
+    .artisan-tag-location { position:absolute; bottom:16px; left:16px; background:#fffdf8ea; backdrop-filter:blur(4px); padding:6px 14px; border-radius:30px; font-size:12px; font-weight:700; color:var(--leaf); }
+
+    .artisan-content h2 { font-family:"Cormorant Garamond",serif; font-size:38px; margin:0 0 8px; }
+    .artisan-region { font-size:14px; font-weight:700; color:var(--terracotta); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:16px; display:block; }
+    .artisan-content p { color:#424e46; font-size:15px; margin-bottom:20px; }
+    .craft-quote { font-family:"Cormorant Garamond",serif; font-style:italic; font-size:20px; color:var(--leaf); border-left:3px solid var(--gold); padding-left:16px; margin:24px 0; }
+    
+    .artisan-products-preview { display:flex; gap:12px; margin-top:24px; }
+    .mini-prod { width:80px; height:80px; border-radius:4px; overflow:hidden; border:1px solid var(--line); }
+    .mini-prod img { width:100%; height:100%; object-fit:cover; }
+
+    footer { background:#201f1b; color:#e9e0d4; padding:52px 32px 28px; margin-top:80px; }
+    .footer-inner { max-width:1100px; margin:auto; display:flex; justify-content:space-between; }
+    
+    @media (max-width:800px) {
+      .artisan-card, .artisan-card:nth-child(even) { grid-template-columns:1fr; gap:24px; }
+      .artisan-card:nth-child(even) .artisan-img-wrapper { order:initial; }
+      .artisan-img-wrapper img { height:320px; }
+      h1 { font-size:40px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>THEVANDOR</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#shop">Collection</a>
+      <a href="artisan.html" class="active">Artisan Stories</a>
+    </nav>
+  </header>
+
+  <section class="hero-artisan">
+    <div class="hero-artisan-inner">
+      <span class="eyebrow">The Hands Behind the Craft</span>
+      <h1>Guardians of Heritage Crafts</h1>
+      <p>Every pattern, loom weave, and carved block carries generations of human knowledge. Meet the master craftspeople preserving India's artistic legacy.</p>
+    </div>
+  </section>
+
+  <main>
+    <!-- Artisan 1 -->
+    <article class="artisan-card">
+      <div class="artisan-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=80" alt="Block printing artisan" />
+        <span class="artisan-tag-location">📍 Bagru, Rajasthan</span>
+      </div>
+      <div class="artisan-content">
+        <span class="artisan-region">Natural Dabu Block Printing</span>
+        <h2>Meena Devi & Community</h2>
+        <p>In the desert village of Bagru, Meena Devi leads a collective of master block printers practicing Dabu mud-resist dyeing. Using carved teak blocks passed down through generations, her workshop creates intricate motifs dyed exclusively with indigo, pomegranate rinds, and iron mud.</p>
+        <div class="craft-quote">
+          "When you hold hand-printed fabric, you are holding the sun, the mud, and hours of quiet concentration."
+        </div>
+        <a href="index.html#shop" style="font-weight:700; color:var(--terracotta); border-bottom:1px solid;">View Bagru Collection →</a>
+      </div>
+    </article>
+
+    <!-- Artisan 2 -->
+    <article class="artisan-card">
+      <div class="artisan-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1603390163248-9b0c156fc4a8?auto=format&fit=crop&w=800&q=80" alt="Weaver handcrafting natural fiber bag" />
+        <span class="artisan-tag-location">📍 Mayurbhanj, Odisha</span>
+      </div>
+      <div class="artisan-content">
+        <span class="artisan-region">Sabai Grass & Natural Fibres</span>
+        <h2>Santhal Women's Guild</h2>
+        <p>Operating deep within Mayurbhanj, rural indigenous women harvest wild Sabai grass, drying it under the sun before hand-braiding it into durable fibers. The guild provides economic independence to over 200 women while preserving sustainable natural weaving.</p>
+        <div class="craft-quote">
+          "Sabai grass connects our forests to homes far away. Each twist gives strength to both the grass and our families."
+        </div>
+        <a href="index.html#shop" style="font-weight:700; color:var(--terracotta); border-bottom:1px solid;">View Woven Accessories →</a>
+      </div>
+    </article>
+
+    <!-- Artisan 3 -->
+    <article class="artisan-card">
+      <div class="artisan-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80" alt="Jewelry master artisan" />
+        <span class="artisan-tag-location">📍 Johari Bazaar, Jaipur</span>
+      </div>
+      <div class="artisan-content">
+        <span class="artisan-region">Traditional Gem Setting & Silverwork</span>
+        <h2>Master Silversmith Rajeshwar</h2>
+        <p>Nested in the narrow lanes of Jaipur's historic pink city, Rajeshwar shapes 925 sterling silver into intricate filigree settings for natural moonstones and garnets. His family has served royal courts and modern patrons for over 80 years.</p>
+        <div class="craft-quote">
+          "No two natural gemstones are identical. The silver frame must listen to the stone's shape."
+        </div>
+        <a href="index.html#shop" style="font-weight:700; color:var(--terracotta); border-bottom:1px solid;">View Gemstone Jewelry →</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>THEVANDOR</a>
+      <p>© 2026 THEVANDOR · Supporting Independent Artisans Across India</p>
+    </div>
+  </footer>
+</body>
+</html>
