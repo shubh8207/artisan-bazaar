@@ -3,168 +3,149 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>THEVANDOR 2099 — Futuristic Cyber Luxury</title>
-  <meta name="description" content="Next-Generation Cyber Luxury Atelier. Quantum-crafted textiles, bioluminescent gemstones, and futuristic heritage." />
+  <title>THEVANDOR — High Luxury Atelier</title>
+  <meta name="description" content="Discover hand-woven cashmere, silk textiles, and handcrafted gemstone jewelry from master artisans." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* ==========================================================================
-       UI UX PRO MAX DESIGN SYSTEM ARCHITECTURE
-       STYLE: Cyberpunk Glassmorphism & High-Tech Neo-Luxury
-       COLORS: Cyber Onyx, Hologram Cyan, Plasma Violet, Neon Gold Accents
-       TYPOGRAPHY: Orbitron (Headings) / Syne & Space Grotesk (Body)
-       ========================================================================== */
-    
+    /* UI UX PRO MAX - LUXURY MINIMALISM DESIGN SYSTEM */
     :root {
-      --cyber-black: #05070B;
-      --cyber-obsidian: #0B0E14;
-      --cyber-card: rgba(15, 20, 30, 0.65);
-      --cyber-glass: rgba(20, 27, 45, 0.45);
-      
-      --cyan-neon: #00F0FF;
-      --violet-plasma: #9D00FF;
-      --gold-quantum: #FFD700;
-      --emerald-cyber: #00FF88;
-      
-      --text-glow: #F0F6FF;
-      --text-muted: #8E9BAE;
-      --line-neon: rgba(0, 240, 255, 0.2);
-      
-      --font-display: "Orbitron", sans-serif;
-      --font-accent: "Syne", sans-serif;
-      --font-body: "Space Grotesk", sans-serif;
-      
-      --glow-cyan: 0 0 25px rgba(0, 240, 255, 0.35);
-      --glow-violet: 0 0 30px rgba(157, 0, 255, 0.4);
+      --bg-canvas: #FAF8F5;
+      --bg-card: #FFFFFF;
+      --bg-subtle: #F3EFEA;
+      --text-main: #181615;
+      --text-muted: #6E6862;
+      --accent-warm: #9E7B56;
+      --border-subtle: #E8E2D9;
+      --font-serif: "Playfair Display", Georgia, serif;
+      --font-sans: "Plus Jakarta Sans", sans-serif;
+      --shadow-card: 0 12px 32px rgba(24, 22, 21, 0.05);
     }
     
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background: var(--cyber-black); color: var(--text-glow); font-family: var(--font-body); line-height: 1.6; overflow-x: hidden; background-image: radial-gradient(circle at 50% 0%, rgba(157, 0, 255, 0.12) 0%, transparent 70%), radial-gradient(circle at 80% 60%, rgba(0, 240, 255, 0.08) 0%, transparent 60%); }
+    body { background: var(--bg-canvas); color: var(--text-main); font-family: var(--font-sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
     button, input, select { font: inherit; }
     button { cursor: pointer; }
 
-    /* Animated Grid Canvas Lines */
-    .bg-grid { position: fixed; inset: 0; background-size: 50px 50px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px); pointer-events: none; z-index: -1; }
+    /* Announcement Bar */
+    .announcement-bar { background: var(--text-main); color: #F5F0EB; text-align: center; padding: 10px 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
 
-    /* Top Announcement HUD */
-    .hud-banner { background: linear-gradient(90deg, rgba(157, 0, 255, 0.3), rgba(0, 240, 255, 0.3)); border-bottom: 1px solid var(--line-neon); text-align: center; padding: 8px 16px; font-size: 11px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--cyan-neon); text-shadow: 0 0 8px rgba(0, 240, 255, 0.6); }
-
-    /* Holographic Floating Header */
-    header { position: sticky; top: 0; background: var(--cyber-glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line-neon); z-index: 50; transition: all 0.3s ease; }
-    .header-inner { max-width: 1440px; margin: auto; padding: 18px 48px; display: flex; justify-content: space-between; align-items: center; }
+    /* Modern Luxury Navigation Header */
+    header { position: sticky; top: 0; background: rgba(250, 248, 245, 0.95); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-subtle); z-index: 50; }
+    .header-inner { max-width: 1360px; margin: auto; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
     
-    .brand-logo { font-family: var(--font-display); font-size: 26px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; background: linear-gradient(135deg, #FFFFFF 20%, var(--cyan-neon) 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: var(--glow-cyan); display: flex; align-items: center; gap: 10px; }
-    .brand-logo::before { content: '❖'; color: var(--cyan-neon); font-size: 20px; }
+    .brand-logo { font-family: var(--font-serif); font-size: 28px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-main); display: flex; align-items: center; gap: 8px; }
+    .brand-logo span { font-family: var(--font-sans); font-size: 9px; font-weight: 600; letter-spacing: 0.25em; color: var(--accent-warm); display: block; margin-top: -2px; }
 
-    nav { display: flex; gap: 32px; font-family: var(--font-accent); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; }
-    nav a { color: var(--text-muted); transition: all 0.25s; position: relative; padding: 6px 0; }
-    nav a:hover, nav a.active { color: var(--cyan-neon); text-shadow: 0 0 10px rgba(0, 240, 255, 0.7); }
-    nav a.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--cyan-neon); box-shadow: var(--glow-cyan); }
+    nav { display: flex; gap: 32px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; }
+    nav a { color: var(--text-muted); transition: color 0.25s; padding: 4px 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: var(--text-main); border-color: var(--accent-warm); }
 
-    .hud-actions { display: flex; align-items: center; gap: 20px; }
-    .hud-btn { background: rgba(0, 240, 255, 0.05); border: 1px solid var(--cyan-neon); color: var(--cyan-neon); padding: 10px 20px; border-radius: 4px; font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; display: flex; align-items: center; gap: 10px; transition: all 0.3s ease; box-shadow: 0 0 12px rgba(0, 240, 255, 0.15); }
-    .hud-btn:hover { background: var(--cyan-neon); color: var(--cyber-black); box-shadow: var(--glow-cyan); transform: translateY(-2px); }
+    .nav-actions { display: flex; align-items: center; gap: 20px; }
+    .cart-trigger-btn { background: none; border: 1px solid var(--border-subtle); padding: 8px 18px; border-radius: 30px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-main); display: flex; align-items: center; gap: 8px; transition: all 0.25s ease; }
+    .cart-trigger-btn:hover { background: var(--text-main); color: #FFF; border-color: var(--text-main); }
+    .cart-count-badge { background: var(--accent-warm); color: #FFF; width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; font-size: 10px; }
 
-    /* Futuristic Cyber Hero */
-    .cyber-hero { position: relative; max-width: 1440px; margin: 40px auto; padding: 0 48px; min-height: 640px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-    .hero-content { z-index: 2; }
-    .cyber-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(157, 0, 255, 0.15); border: 1px solid var(--violet-plasma); color: #D8B4FF; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 24px; box-shadow: var(--glow-violet); }
+    /* Elegant Hero Section */
+    .hero-section { max-width: 1360px; margin: 40px auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; min-height: 560px; }
+    .hero-text-col { padding-right: 20px; }
+    .hero-eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.22em; color: var(--accent-warm); margin-bottom: 16px; display: block; }
+    .hero-headline { font-family: var(--font-serif); font-size: clamp(40px, 4.8vw, 64px); font-weight: 400; line-height: 1.12; margin-bottom: 24px; color: var(--text-main); }
+    .hero-body { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 36px; max-width: 480px; font-weight: 400; }
     
-    .hero-title { font-family: var(--font-display); font-size: clamp(40px, 5vw, 68px); font-weight: 900; line-height: 1.05; letter-spacing: 0.02em; margin-bottom: 24px; text-transform: uppercase; }
-    .hero-title span { background: linear-gradient(135deg, var(--cyan-neon), var(--violet-plasma)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 12px; background: var(--text-main); color: #FFF; padding: 16px 36px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; transition: all 0.3s ease; border: 1px solid var(--text-main); }
+    .btn-primary:hover { background: var(--accent-warm); border-color: var(--accent-warm); transform: translateY(-2px); }
+
+    .hero-image-col { position: relative; height: 560px; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card); }
+    .hero-image-col img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+    .hero-image-col:hover img { transform: scale(1.04); }
+
+    /* Section Styling */
+    section.store-section { max-width: 1360px; margin: 100px auto; padding: 0 40px; }
+    .section-title-wrap { text-align: center; max-width: 600px; margin: 0 auto 48px; }
+    .section-title-wrap h2 { font-family: var(--font-serif); font-size: 38px; font-weight: 400; margin-bottom: 12px; }
+    .section-title-wrap p { font-size: 14px; color: var(--text-muted); }
+
+    /* Filter Toolbar */
+    .filter-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding-bottom: 16px; border-bottom: 1px solid var(--border-subtle); flex-wrap: wrap; gap: 16px; }
+    .filter-pills { display: flex; gap: 12px; flex-wrap: wrap; }
+    .filter-pill { background: none; border: 1px solid var(--border-subtle); padding: 8px 18px; border-radius: 30px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); transition: all 0.25s ease; }
+    .filter-pill:hover, .filter-pill.active { background: var(--text-main); color: #FFF; border-color: var(--text-main); }
+
+    .sort-select-wrap select { border: none; background: transparent; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-main); outline: none; cursor: pointer; }
+
+    /* Product Grid */
+    .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+    .product-card { background: var(--bg-card); border-radius: 6px; overflow: hidden; border: 1px solid var(--border-subtle); transition: all 0.3s ease; display: flex; flex-direction: column; cursor: pointer; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); border-color: var(--accent-warm); }
     
-    .hero-desc { font-size: 16px; color: var(--text-muted); margin-bottom: 40px; max-width: 520px; font-weight: 400; line-height: 1.7; }
+    .card-thumb { position: relative; height: 340px; overflow: hidden; background: var(--bg-subtle); }
+    .card-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .product-card:hover .card-thumb img { transform: scale(1.06); }
     
-    .cyber-cta-group { display: flex; gap: 20px; }
-    .btn-cyber-primary { background: linear-gradient(135deg, var(--cyan-neon), #0099FF); color: var(--cyber-black); padding: 18px 36px; border: none; border-radius: 4px; font-family: var(--font-display); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; transition: all 0.3s ease; box-shadow: var(--glow-cyan); }
-    .btn-cyber-primary:hover { transform: scale(1.04); box-shadow: 0 0 35px rgba(0, 240, 255, 0.7); }
+    .quick-add-btn { position: absolute; bottom: 12px; left: 12px; right: 12px; background: var(--text-main); color: #FFF; border: none; padding: 12px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; border-radius: 4px; opacity: 0; transform: translateY(10px); transition: all 0.25s ease; }
+    .product-card:hover .quick-add-btn { opacity: 1; transform: translateY(0); }
+    .quick-add-btn:hover { background: var(--accent-warm); }
+
+    .card-wishlist { position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; background: rgba(255,255,255,0.9); border: none; border-radius: 50%; display: grid; place-items: center; font-size: 14px; transition: all 0.2s; z-index: 5; }
+    .card-wishlist:hover, .card-wishlist.saved { background: #FFF; color: var(--accent-warm); transform: scale(1.1); }
+
+    .card-body { padding: 18px; text-align: center; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
+    .card-artisan { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent-warm); margin-bottom: 6px; }
+    .card-title { font-family: var(--font-serif); font-size: 17px; font-weight: 500; margin-bottom: 8px; color: var(--text-main); line-height: 1.3; }
+    .card-price { font-size: 14px; font-weight: 600; color: var(--text-main); }
+
+    /* Footer */
+    footer { background: var(--text-main); color: #D8D2C9; padding: 80px 40px 36px; margin-top: 120px; }
+    .footer-inner { max-width: 1360px; margin: auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
+    .footer-brand h3 { font-family: var(--font-serif); font-size: 26px; color: #FFF; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .footer-brand p { font-size: 13px; color: #A09A92; max-width: 320px; line-height: 1.7; }
+    .footer-col-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: #FFF; margin-bottom: 20px; }
+    .footer-menu { list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .footer-menu a { color: #A09A92; transition: color 0.2s; }
+    .footer-menu a:hover { color: #FFF; }
+    .footer-bottom { max-width: 1360px; margin: 60px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; font-size: 11px; color: #7A746D; text-transform: uppercase; letter-spacing: 0.12em; }
+
+    /* Slide-out Cart Drawer */
+    .drawer-overlay { position: fixed; inset: 0; background: rgba(24, 22, 21, 0.6); backdrop-filter: blur(6px); opacity: 0; pointer-events: none; transition: opacity 0.35s ease; z-index: 100; }
+    .drawer-overlay.open { opacity: 1; pointer-events: auto; }
+    .cart-drawer { position: fixed; top: 0; right: 0; width: 100%; max-width: 420px; height: 100vh; background: var(--bg-canvas); z-index: 101; transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; box-shadow: -10px 0 35px rgba(0,0,0,0.15); }
+    .drawer-overlay.open .cart-drawer { transform: translateX(0); }
+
+    .drawer-header { padding: 24px; border-bottom: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; }
+    .drawer-header h3 { font-family: var(--font-serif); font-size: 22px; font-weight: 500; }
+    .close-btn { background: none; border: none; font-size: 22px; color: var(--text-main); cursor: pointer; }
+
+    .drawer-items { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 20px; }
+    .cart-item { display: grid; grid-template-columns: 70px 1fr auto; gap: 16px; align-items: center; padding-bottom: 16px; border-bottom: 1px solid var(--border-subtle); }
+    .cart-item img { width: 70px; height: 90px; object-fit: cover; border-radius: 4px; }
     
-    .btn-cyber-outline { background: transparent; color: var(--text-glow); padding: 18px 36px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 4px; font-family: var(--font-display); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; transition: all 0.3s ease; }
-    .btn-cyber-outline:hover { border-color: var(--violet-plasma); color: var(--violet-plasma); box-shadow: var(--glow-violet); }
+    .drawer-footer { padding: 24px; border-top: 1px solid var(--border-subtle); background: var(--bg-card); }
+    .price-row { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 10px; color: var(--text-muted); }
+    .price-row.total { font-size: 17px; font-weight: 700; color: var(--text-main); font-family: var(--font-serif); margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--border-subtle); }
 
-    /* Cyber Hero Visual Showcase */
-    .hero-visual-frame { position: relative; width: 100%; height: 580px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line-neon); background: var(--cyber-obsidian); box-shadow: var(--glow-violet); }
-    .hero-visual-frame img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85) contrast(1.1); transition: transform 0.8s ease; }
-    .hero-visual-frame:hover img { transform: scale(1.05); }
-    .hud-overlay-card { position: absolute; bottom: 24px; left: 24px; right: 24px; background: rgba(11, 14, 20, 0.85); backdrop-filter: blur(12px); border: 1px solid var(--line-neon); padding: 20px 24px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
-    .hud-stat-num { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--cyan-neon); }
+    /* Quick View Modal */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(24, 22, 21, 0.65); backdrop-filter: blur(8px); opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 120; display: grid; place-items: center; padding: 24px; }
+    .modal-overlay.open { opacity: 1; pointer-events: auto; }
+    .modal-card { background: var(--bg-canvas); max-width: 880px; width: 100%; border-radius: 8px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; position: relative; box-shadow: 0 25px 50px rgba(0,0,0,0.25); transform: scale(0.96); transition: transform 0.3s ease; }
+    .modal-overlay.open .modal-card { transform: scale(1); }
 
-    /* Curated Section Header */
-    section.cyber-section { max-width: 1440px; margin: 120px auto; padding: 0 48px; }
-    .section-head-cyber { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 24px; }
-    .section-head-cyber h2 { font-family: var(--font-display); font-size: 36px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; }
-
-    /* Interactive Filter Bar */
-    .filter-pills-cyber { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
-    .filter-btn-cyber { background: rgba(15, 20, 30, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-muted); padding: 10px 22px; border-radius: 30px; font-family: var(--font-accent); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; transition: all 0.25s ease; }
-    .filter-btn-cyber:hover, .filter-btn-cyber.active { background: rgba(0, 240, 255, 0.15); border-color: var(--cyan-neon); color: var(--cyan-neon); box-shadow: var(--glow-cyan); }
-
-    /* Product Grid Cyberpunk */
-    .cyber-products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
-    .cyber-card { background: var(--cyber-card); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; overflow: hidden; position: relative; backdrop-filter: blur(10px); transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; }
-    .cyber-card:hover { border-color: var(--cyan-neon); transform: translateY(-6px); box-shadow: var(--glow-cyan); }
-    
-    .cyber-thumb-wrapper { position: relative; width: 100%; height: 360px; overflow: hidden; background: #000; }
-    .cyber-thumb-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-    .cyber-card:hover .cyber-thumb-wrapper img { transform: scale(1.08); }
-    
-    .quick-add-cyber { position: absolute; bottom: 12px; left: 12px; right: 12px; background: var(--cyan-neon); color: var(--cyber-black); border: none; padding: 12px; font-family: var(--font-display); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; border-radius: 4px; opacity: 0; transform: translateY(15px); transition: all 0.3s ease; }
-    .cyber-card:hover .quick-add-cyber { opacity: 1; transform: translateY(0); }
-    .quick-add-cyber:hover { background: #FFFFFF; box-shadow: 0 0 20px #FFFFFF; }
-
-    .wishlist-cyber { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; background: rgba(5, 7, 11, 0.7); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 50%; color: var(--text-glow); display: grid; place-items: center; font-size: 14px; transition: all 0.25s; }
-    .wishlist-cyber:hover, .wishlist-cyber.saved { border-color: var(--violet-plasma); color: var(--violet-plasma); background: rgba(157, 0, 255, 0.2); }
-
-    .cyber-card-body { padding: 20px; display: flex; flex-direction: column; flex: 1; justify-content: space-between; }
-    .cyber-artisan-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--violet-plasma); margin-bottom: 6px; }
-    .cyber-card-title { font-family: var(--font-accent); font-size: 18px; font-weight: 700; margin-bottom: 12px; color: #FFFFFF; }
-    .cyber-card-price { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--cyan-neon); }
-
-    /* Footer Cyberpunk */
-    footer { background: var(--cyber-obsidian); border-top: 1px solid var(--line-neon); padding: 80px 48px 40px; margin-top: 120px; }
-    .footer-inner-cyber { max-width: 1440px; margin: auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
-    .footer-bottom-cyber { max-width: 1440px; margin: 60px auto 0; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.05); display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); }
-
-    /* Slide-out Holographic Cart Drawer */
-    .cyber-drawer-overlay { position: fixed; inset: 0; background: rgba(5, 7, 11, 0.75); backdrop-filter: blur(12px); opacity: 0; pointer-events: none; transition: opacity 0.35s ease; z-index: 100; }
-    .cyber-drawer-overlay.open { opacity: 1; pointer-events: auto; }
-    .cyber-cart-drawer { position: fixed; top: 0; right: 0; width: 100%; max-width: 440px; height: 100vh; background: var(--cyber-obsidian); border-left: 1px solid var(--line-neon); z-index: 101; transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; box-shadow: var(--glow-violet); }
-    .cyber-drawer-overlay.open .cyber-cart-drawer { transform: translateX(0); }
-
-    .drawer-header-cyber { padding: 24px; border-bottom: 1px solid var(--line-neon); display: flex; justify-content: space-between; align-items: center; }
-    .drawer-header-cyber h3 { font-family: var(--font-display); font-size: 20px; font-weight: 800; text-transform: uppercase; color: var(--cyan-neon); }
-    .close-cyber { background: none; border: none; font-size: 24px; color: var(--text-glow); cursor: pointer; }
-
-    .drawer-items-cyber { flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 20px; }
-    .cyber-cart-item { display: grid; grid-template-columns: 70px 1fr auto; gap: 16px; align-items: center; padding-bottom: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
-    .cyber-cart-item img { width: 70px; height: 90px; object-fit: cover; border-radius: 4px; }
-    
-    .drawer-footer-cyber { padding: 24px; border-top: 1px solid var(--line-neon); background: rgba(15, 20, 30, 0.9); }
-    .price-row-cyber { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 10px; color: var(--text-muted); }
-    .price-row-cyber.total { font-family: var(--font-display); font-size: 18px; font-weight: 800; color: var(--cyan-neon); margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--line-neon); }
-
-    /* Futuristic Quick View Modal */
-    .cyber-modal-overlay { position: fixed; inset: 0; background: rgba(5, 7, 11, 0.85); backdrop-filter: blur(16px); opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 120; display: grid; place-items: center; padding: 32px; }
-    .cyber-modal-overlay.open { opacity: 1; pointer-events: auto; }
-    .cyber-modal-card { background: var(--cyber-obsidian); border: 1px solid var(--line-neon); max-width: 900px; width: 100%; border-radius: 8px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; position: relative; box-shadow: var(--glow-cyan); transform: scale(0.95); transition: transform 0.3s ease; }
-    .cyber-modal-overlay.open .cyber-modal-card { transform: scale(1); }
-
-    /* Toast HUD */
-    .cyber-toast { position: fixed; bottom: 32px; right: 32px; background: var(--cyber-obsidian); border: 1px solid var(--cyan-neon); color: var(--cyan-neon); padding: 14px 28px; font-family: var(--font-display); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.15em; border-radius: 4px; box-shadow: var(--glow-cyan); transform: translateY(100px); opacity: 0; transition: all 0.3s ease; z-index: 200; }
-    .cyber-toast.show { transform: translateY(0); opacity: 1; }
+    /* Toast Notification */
+    .toast-msg { position: fixed; bottom: 24px; right: 24px; background: var(--text-main); color: #FFF; padding: 14px 24px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 4px; transform: translateY(80px); opacity: 0; transition: all 0.3s ease; z-index: 200; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+    .toast-msg.show { transform: translateY(0); opacity: 1; }
 
     @media (max-width: 1024px) {
-      .cyber-hero { grid-template-columns: 1fr; }
-      .hero-visual-frame { height: 380px; }
-      .cyber-products-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-inner-cyber { grid-template-columns: 1fr 1fr; }
+      .hero-section { grid-template-columns: 1fr; gap: 32px; min-height: auto; }
+      .hero-image-col { height: 380px; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
     }
     @media (max-width: 640px) {
-      .cyber-products-grid { grid-template-columns: 1fr; }
-      .cyber-modal-card { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+      .modal-card { grid-template-columns: 1fr; }
       .header-inner { padding: 16px 20px; }
       nav { display: none; }
     }
@@ -172,156 +153,157 @@
 </head>
 <body>
 
-  <div class="bg-grid"></div>
-
-  <!-- HUD Announcement -->
-  <div class="hud-banner">
-    ⚡ QUANTUM WEAVE ATELIER 2099 · NEURAL FITTING & BIOLUMINESCENT TEXTILES ⚡
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    Complimentary Express Shipping Across India · Small-Batch Artisanal Creations
   </div>
 
-  <!-- Header Navigation -->
+  <!-- Header -->
   <header>
     <div class="header-inner">
-      <a href="index.html" class="brand-logo">THEVANDOR 2099</a>
+      <a href="index.html" class="brand-logo">
+        THEVANDOR
+        <span>Artisanal Luxury Atelier</span>
+      </a>
       <nav>
-        <a href="#catalog" class="active">Quantum Catalog</a>
-        <a href="artisan.html">Neuro-Artisans</a>
-        <a href="checkout.html">Direct Neural Pay</a>
+        <a href="#catalog" class="active">Collection</a>
+        <a href="artisan.html">Artisan Stories</a>
+        <a href="checkout.html">Checkout</a>
       </nav>
-      <div class="hud-actions">
-        <button class="hud-btn" onclick="toggleCartCyber()">
-          CYBER BAG [<span id="cart-num-hud">0</span>]
+      <div class="nav-actions">
+        <button class="cart-trigger-btn" onclick="toggleCart()">
+          Shopping Bag
+          <span class="cart-count-badge" id="cart-num-badge">0</span>
         </button>
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="cyber-hero">
-    <div class="hero-content">
-      <span class="cyber-tag">❖ Futuristic Craft Intelligence</span>
-      <h1 class="hero-title">Next-Gen <span>Cyber Luxury</span> Atelier</h1>
-      <p class="hero-desc">Blending ancient hand-weaving techniques with quantum bioluminescent fibers and high-tech physical computing.</p>
-      <div class="cyber-cta-group">
-        <a href="#catalog" class="btn-cyber-primary">Explore Neural Collection →</a>
-        <a href="artisan.html" class="btn-cyber-outline">Artisan Matrix</a>
-      </div>
+  <section class="hero-section">
+    <div class="hero-text-col">
+      <span class="hero-eyebrow">Handcrafted Elegance</span>
+      <h1 class="hero-headline">Made with Hands. Chosen with Heart.</h1>
+      <p class="hero-body">Thoughtfully created silk sarees, botanical block prints, natural sabai totes, and gemstone jewelry from master regional artisans.</p>
+      <a href="#catalog" class="btn-primary">Explore The Collection →</a>
     </div>
 
-    <div class="hero-visual-frame">
-      <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=85" alt="Quantum Cyber Textile" />
-      <div class="hud-overlay-card">
-        <div>
-          <div style="font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">BIOMETRIC SENSOR</div>
-          <div style="font-family: var(--font-display); font-size: 14px; font-weight: 700;">OPTICAL FIBER SILK</div>
-        </div>
-        <div class="hud-stat-num">99.8% ACCURACY</div>
-      </div>
+    <div class="hero-image-col">
+      <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=85" alt="Handcrafted luxury textiles" />
     </div>
   </section>
 
   <!-- Catalog Section -->
-  <section class="cyber-section" id="catalog">
-    <div class="section-head-cyber">
-      <div>
-        <span class="cyber-tag" style="margin-bottom: 8px;">2099 CYBER RELEASE</span>
-        <h2>Quantum Works & High-Tech Jewels</h2>
-      </div>
+  <section class="store-section" id="catalog">
+    <div class="section-title-wrap">
+      <span class="hero-eyebrow" style="margin-bottom: 8px;">Curated Selection</span>
+      <h2>Fresh From The Artisans</h2>
+      <p>Every piece represents hours of patient manual weaving, block printing, and jewel setting.</p>
     </div>
 
-    <!-- Filter Pills -->
-    <div class="filter-pills-cyber">
-      <button class="filter-btn-cyber active" onclick="filterCyber('All')">All Cyber Works</button>
-      <button class="filter-btn-cyber" onclick="filterCyber('Clothing')">Neural Apparel</button>
-      <button class="filter-btn-cyber" onclick="filterCyber('Handbags')">Cyber Sabai Leather</button>
-      <button class="filter-btn-cyber" onclick="filterCyber('Home linens')">Quantum Linens</button>
-      <button class="filter-btn-cyber" onclick="filterCyber('Gemstones')">Bioluminescent Gems</button>
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="filter-pills">
+        <button class="filter-pill active" onclick="filterItems('All')">All Items</button>
+        <button class="filter-pill" onclick="filterItems('Clothing')">Clothing</button>
+        <button class="filter-pill" onclick="filterItems('Handbags')">Handbags</button>
+        <button class="filter-pill" onclick="filterItems('Home linens')">Home Linens</button>
+        <button class="filter-pill" onclick="filterItems('Gemstones')">Gemstones</button>
+      </div>
+
+      <div class="sort-select-wrap">
+        <select onchange="sortItems(this.value)">
+          <option value="featured">Sort by: Curated</option>
+          <option value="low-high">Price: Low to High</option>
+          <option value="high-low">Price: High to Low</option>
+        </select>
+      </div>
     </div>
 
     <!-- Product Grid -->
-    <div class="cyber-products-grid" id="cyber-products-grid">
-      <!-- Injected via Javascript -->
+    <div class="products-grid" id="products-grid">
+      <!-- JS Rendered -->
     </div>
   </section>
 
-  <!-- Cyber Footer -->
+  <!-- Footer -->
   <footer>
-    <div class="footer-inner-cyber">
-      <div>
-        <div class="brand-logo" style="font-size: 22px; margin-bottom: 16px;">THEVANDOR 2099</div>
-        <p style="font-size: 13px; color: var(--text-muted); max-width: 320px;">Architecting the future of physical craftsmanship with high-tech materials and humanistic design principles.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>THEVANDOR</h3>
+        <p>A house of small-batch artisanal luxury. Preserving India's heritage crafts with dignity, style, and care.</p>
       </div>
       <div>
-        <div style="font-family: var(--font-display); font-size: 11px; font-weight: 800; color: var(--cyan-neon); margin-bottom: 20px;">HUD NAVIGATION</div>
-        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
-          <a href="#catalog">Catalog Matrix</a>
-          <a href="artisan.html">Neuro Guilds</a>
-          <a href="checkout.html">Neural Checkout</a>
-        </div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-menu">
+          <li><a href="#catalog">Collection</a></li>
+          <li><a href="artisan.html">Artisan Stories</a></li>
+          <li><a href="checkout.html">Checkout Flow</a></li>
+        </ul>
       </div>
       <div>
-        <div style="font-family: var(--font-display); font-size: 11px; font-weight: 800; color: var(--cyan-neon); margin-bottom: 20px;">CONNECTIVITY</div>
-        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
-          <a href="javascript:void(0)" onclick="showToastCyber('Quantum Encrypted')">256-Bit SSL</a>
-          <a href="javascript:void(0)" onclick="showToastCyber('Satellite Shipping Active')">Global Drone Delivery</a>
-        </div>
+        <div class="footer-col-title">Customer Care</div>
+        <ul class="footer-menu">
+          <li><a href="javascript:void(0)" onclick="showToast('Complimentary shipping on orders > ₹1,499')">Shipping Policy</a></li>
+          <li><a href="javascript:void(0)" onclick="showToast('14-day easy returns policy')">Returns & Exchange</a></li>
+        </ul>
       </div>
       <div>
-        <div style="font-family: var(--font-display); font-size: 11px; font-weight: 800; color: var(--cyan-neon); margin-bottom: 20px;">NEURAL NEWSLETTER</div>
-        <input type="email" placeholder="enter_quantum_mail" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--line-neon); border-radius: 4px; color: #fff; outline: none; margin-bottom: 12px;" />
-        <button class="btn-cyber-primary" style="width: 100%; padding: 12px;">SUBSCRIBE HUD →</button>
+        <div class="footer-col-title">Newsletter</div>
+        <input type="email" placeholder="Your email address" style="width: 100%; padding: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; color: #FFF; outline: none; margin-bottom: 12px;" />
+        <button class="btn-primary" style="width: 100%; padding: 12px; justify-content: center;" onclick="showToast('Subscribed!')">Subscribe →</button>
       </div>
     </div>
-    <div class="footer-bottom-cyber">
-      <span>© 2099 THEVANDOR CYBER ATELIER · ALL RIGHTS RESERVED</span>
-      <span>SOLOMEO · JAIPUR · NEO-MILAN</span>
+    <div class="footer-bottom">
+      <span>© 2026 THEVANDOR · All Rights Reserved</span>
+      <span>Handcrafted with Care</span>
     </div>
   </footer>
 
-  <!-- Slide-out Cart Drawer -->
-  <div class="cyber-drawer-overlay" id="cyber-drawer-overlay" onclick="toggleCartCyber()">
-    <div class="cyber-cart-drawer" onclick="event.stopPropagation()">
-      <div class="drawer-header-cyber">
-        <h3>NEURAL CYBER BAG</h3>
-        <button class="close-cyber" onclick="toggleCartCyber()">✕</button>
+  <!-- Slide-out Shopping Bag Drawer -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleCart()">
+    <div class="cart-drawer" onclick="event.stopPropagation()">
+      <div class="drawer-header">
+        <h3>Shopping Bag</h3>
+        <button class="close-btn" onclick="toggleCart()">✕</button>
       </div>
-      <div class="drawer-items-cyber" id="cyber-cart-items">
+      <div class="drawer-items" id="cart-drawer-items">
         <!-- JS Rendered -->
       </div>
-      <div class="drawer-footer-cyber">
-        <div class="price-row-cyber">
+      <div class="drawer-footer">
+        <div class="price-row">
           <span>Subtotal</span>
-          <span id="cyber-subtotal">₹0</span>
+          <span id="cart-subtotal" style="font-weight: 600;">₹0</span>
         </div>
-        <div class="price-row-cyber total">
-          <span>Total Quantum Amount</span>
-          <span id="cyber-total">₹0</span>
+        <div class="price-row total">
+          <span>Total Amount</span>
+          <span id="cart-total" style="color: var(--accent-warm);">₹0</span>
         </div>
-        <a href="checkout.html" class="btn-cyber-primary" style="width: 100%; text-align: center; display: block; margin-top: 20px;">Execute Neural Checkout →</a>
+        <a href="checkout.html" class="btn-primary" style="width: 100%; text-align: center; justify-content: center; margin-top: 16px;">Proceed to Checkout →</a>
       </div>
     </div>
   </div>
 
-  <!-- Quick View Cyber Modal -->
-  <div class="cyber-modal-overlay" id="cyber-modal-overlay" onclick="closeCyberModal()">
-    <div class="cyber-modal-card" onclick="event.stopPropagation()">
-      <button class="close-cyber" style="position: absolute; top: 16px; right: 16px; z-index: 10;" onclick="closeCyberModal()">✕</button>
-      <div style="height: 480px; background: #000;">
-        <img id="modal-cyber-img" src="" alt="Work" style="width: 100%; height: 100%; object-fit: cover;" />
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <button class="close-btn" style="position: absolute; top: 16px; right: 16px; z-index: 10;" onclick="closeModal()">✕</button>
+      <div style="height: 460px; background: var(--bg-subtle);">
+        <img id="modal-img" src="" alt="Detail" style="width: 100%; height: 100%; object-fit: cover;" />
       </div>
       <div style="padding: 36px; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
-          <span id="modal-cyber-cat" class="cyber-tag" style="margin-bottom: 12px;">Category</span>
-          <h3 id="modal-cyber-title" style="font-family: var(--font-display); font-size: 24px; font-weight: 800; margin-bottom: 12px; color: var(--cyan-neon);">Title</h3>
-          <div id="modal-cyber-price" style="font-family: var(--font-display); font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 16px;">₹0</div>
-          <p id="modal-cyber-desc" style="font-size: 14px; color: var(--text-muted); line-height: 1.7;">Description</p>
+          <span id="modal-cat" class="hero-eyebrow" style="margin-bottom: 8px;">Category</span>
+          <h3 id="modal-title" style="font-family: var(--font-serif); font-size: 28px; margin-bottom: 12px;">Title</h3>
+          <div id="modal-price" style="font-size: 20px; font-weight: 600; color: var(--accent-warm); margin-bottom: 16px;">₹0</div>
+          <p id="modal-desc" style="font-size: 14px; color: var(--text-muted); line-height: 1.7;">Description</p>
         </div>
-        <button class="btn-cyber-primary" onclick="addCurrentModalCyberToCart()">Add To Cyber Bag</button>
+        <button class="btn-primary" onclick="addCurrentModalToCart()">Add To Shopping Bag</button>
       </div>
     </div>
   </div>
 
-  <div class="cyber-toast" id="cyber-toast"></div>
+  <div class="toast-msg" id="toast-msg"></div>
 
   <script>
     const products = [
@@ -400,102 +382,111 @@
     ];
 
     let activeFilter = 'All';
+    let currentSort = 'featured';
     let activeModalProduct = null;
     let wishlist = new Set();
     let cart = JSON.parse(localStorage.getItem('thevandor_cart')) || [{ productId: 1, qty: 1 }];
 
-    function renderCyberProducts() {
-      const grid = document.getElementById('cyber-products-grid');
+    function renderProducts() {
+      const grid = document.getElementById('products-grid');
       let filtered = activeFilter === 'All' ? [...products] : products.filter(p => p.category === activeFilter);
 
+      if (currentSort === 'low-high') filtered.sort((a, b) => a.price - b.price);
+      else if (currentSort === 'high-low') filtered.sort((a, b) => b.price - a.price);
+
       grid.innerHTML = filtered.map(p => `
-        <article class="cyber-card" onclick="openCyberModal(${p.id})">
-          <div class="cyber-thumb-wrapper">
+        <article class="product-card" onclick="openModal(${p.id})">
+          <div class="card-thumb">
             <img src="${p.image}" alt="${p.title}" />
-            <button class="quick-add-cyber" onclick="event.stopPropagation(); addToCartCyber(${p.id})">Quick Add +</button>
-            <button class="wishlist-cyber ${wishlist.has(p.id) ? 'saved' : ''}" onclick="toggleWishlistCyber(event, ${p.id})">
+            <button class="quick-add-btn" onclick="event.stopPropagation(); addToCart(${p.id})">Quick Add +</button>
+            <button class="card-wishlist ${wishlist.has(p.id) ? 'saved' : ''}" onclick="toggleWishlist(event, ${p.id})">
               ${wishlist.has(p.id) ? '♥' : '♡'}
             </button>
           </div>
-          <div class="cyber-card-body">
+          <div class="card-body">
             <div>
-              <div class="cyber-artisan-tag">by ${p.artisan}</div>
-              <h4 class="cyber-card-title">${p.title}</h4>
+              <div class="card-artisan">by ${p.artisan}</div>
+              <h4 class="card-title">${p.title}</h4>
             </div>
-            <div class="cyber-card-price">₹${p.price.toLocaleString('en-IN')}</div>
+            <div class="card-price">₹${p.price.toLocaleString('en-IN')}</div>
           </div>
         </article>
       `).join('');
     }
 
-    function filterCyber(cat) {
+    function filterItems(cat) {
       activeFilter = cat;
-      document.querySelectorAll('.filter-btn-cyber').forEach(btn => {
-        btn.classList.toggle('active', btn.textContent.trim().toLowerCase().includes(cat.toLowerCase()) || (cat === 'All' && btn.textContent.trim() === 'All Cyber Works'));
+      document.querySelectorAll('.filter-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim().toLowerCase().includes(cat.toLowerCase()) || (cat === 'All' && btn.textContent.trim() === 'All Items'));
       });
-      renderCyberProducts();
+      renderProducts();
     }
 
-    function toggleWishlistCyber(e, id) {
+    function sortItems(type) {
+      currentSort = type;
+      renderProducts();
+    }
+
+    function toggleWishlist(e, id) {
       e.stopPropagation();
       if (wishlist.has(id)) {
         wishlist.delete(id);
-        showToastCyber('Removed from neural wishlist');
+        showToast('Removed from favourites');
       } else {
         wishlist.add(id);
-        showToastCyber('Saved to neural wishlist ❖');
+        showToast('Saved to your favourites ♥');
       }
-      renderCyberProducts();
+      renderProducts();
     }
 
-    function openCyberModal(id) {
+    function openModal(id) {
       const p = products.find(prod => prod.id === id);
       if (!p) return;
       activeModalProduct = p;
-      document.getElementById('modal-cyber-img').src = p.image;
-      document.getElementById('modal-cyber-title').textContent = p.title;
-      document.getElementById('modal-cyber-cat').textContent = p.category;
-      document.getElementById('modal-cyber-price').textContent = `₹${p.price.toLocaleString('en-IN')}`;
-      document.getElementById('modal-cyber-desc').textContent = p.desc;
-      document.getElementById('cyber-modal-overlay').classList.add('open');
+      document.getElementById('modal-img').src = p.image;
+      document.getElementById('modal-title').textContent = p.title;
+      document.getElementById('modal-cat').textContent = p.category;
+      document.getElementById('modal-price').textContent = `₹${p.price.toLocaleString('en-IN')}`;
+      document.getElementById('modal-desc').textContent = p.desc;
+      document.getElementById('modal-overlay').classList.add('open');
     }
 
-    function closeCyberModal() {
-      document.getElementById('cyber-modal-overlay').classList.remove('open');
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.remove('open');
     }
 
-    function addCurrentModalCyberToCart() {
+    function addCurrentModalToCart() {
       if (activeModalProduct) {
-        addToCartCyber(activeModalProduct.id);
-        closeCyberModal();
-        toggleCartCyber();
+        addToCart(activeModalProduct.id);
+        closeModal();
+        toggleCart();
       }
     }
 
-    function toggleCartCyber() {
-      document.getElementById('cyber-drawer-overlay').classList.toggle('open');
+    function toggleCart() {
+      document.getElementById('drawer-overlay').classList.toggle('open');
     }
 
-    function addToCartCyber(id) {
+    function addToCart(id) {
       const existing = cart.find(i => i.productId === id);
       if (existing) existing.qty += 1;
       else cart.push({ productId: id, qty: 1 });
-      saveCartCyber();
-      showToastCyber('Added to Cyber Bag ⚡');
+      saveCart();
+      showToast('Added to your shopping bag');
     }
 
-    function saveCartCyber() {
+    function saveCart() {
       localStorage.setItem('thevandor_cart', JSON.stringify(cart));
-      updateCartCyberUI();
+      updateCartUI();
     }
 
-    function updateCartCyberUI() {
-      const container = document.getElementById('cyber-cart-items');
+    function updateCartUI() {
+      const container = document.getElementById('cart-drawer-items');
       let subtotal = 0;
       let totalQty = 0;
 
       if (cart.length === 0) {
-        container.innerHTML = `<div style="text-align:center; padding:40px 0; color:var(--text-muted);">Cyber Bag Empty</div>`;
+        container.innerHTML = `<div style="text-align:center; padding:40px 0; color:var(--text-muted);">Your shopping bag is empty.</div>`;
       } else {
         container.innerHTML = cart.map(item => {
           const p = products.find(prod => prod.id === item.productId);
@@ -504,34 +495,34 @@
           const itemTotal = p.price * item.qty;
           subtotal += itemTotal;
           return `
-            <div class="cyber-cart-item">
+            <div class="cart-item">
               <img src="${p.image}" alt="${p.title}" />
               <div>
-                <h4 style="font-size: 14px;">${p.title}</h4>
+                <h4 style="font-size: 14px; font-family: var(--font-serif);">${p.title}</h4>
                 <p style="font-size: 12px; color: var(--text-muted);">₹${p.price.toLocaleString('en-IN')} × ${item.qty}</p>
               </div>
-              <div style="font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--cyan-neon);">₹${itemTotal.toLocaleString('en-IN')}</div>
+              <div style="font-size: 14px; font-weight: 600;">₹${itemTotal.toLocaleString('en-IN')}</div>
             </div>
           `;
         }).join('');
       }
 
-      document.getElementById('cart-num-hud').textContent = totalQty;
-      document.getElementById('cyber-subtotal').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
-      document.getElementById('cyber-total').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+      document.getElementById('cart-num-badge').textContent = totalQty;
+      document.getElementById('cart-subtotal').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+      document.getElementById('cart-total').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
     }
 
     let toastTimer;
-    function showToastCyber(msg) {
-      const toast = document.getElementById('cyber-toast');
+    function showToast(msg) {
+      const toast = document.getElementById('toast-msg');
       toast.textContent = msg;
       toast.classList.add('show');
       clearTimeout(toastTimer);
       toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
     }
 
-    renderCyberProducts();
-    updateCartCyberUI();
+    renderProducts();
+    updateCartUI();
   </script>
 </body>
 </html>
