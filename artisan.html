@@ -59,8 +59,8 @@
     .nav-left { display: flex; gap: 32px; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; }
     .nav-left a { position: relative; padding: 4px 0; color: var(--text-main); }
     .nav-left a.active { color: var(--brunello-bronze); border-bottom: 1px solid var(--brunello-bronze); }
-    .brand-logo { font-family: var(--font-heading); font-size: 32px; font-weight: 600; letter-spacing: 0.12em; text-align: center; text-transform: uppercase; }
-    .brand-logo span { display: block; font-family: var(--font-body); font-size: 9px; font-weight: 500; letter-spacing: 0.35em; color: var(--brunello-bronze); margin-top: -2px; }
+    .brand-logo { display: flex; justify-content: center; align-items: center; }
+    .brand-logo img { height: 44px; width: auto; object-fit: contain; }
 
     .journal-hero { background: var(--bg-accent); padding: 100px 48px; text-align: center; border-bottom: 1px solid var(--line-subtle); }
     .journal-hero-inner { max-width: 800px; margin: auto; }
@@ -112,9 +112,8 @@
         <a href="index.html#curated">Artisans</a>
         <a href="artisan.html" class="active">Journal</a>
       </nav>
-      <a href="index.html" class="brand-logo">
-        THEVANDOR
-        <span>Solomeo · Jaipur · Milan</span>
+      <a href="index.html" class="brand-logo" aria-label="THEVANDOR Home">
+        <img src="thevandor-logo.png" alt="THEVANDOR Luxury Atelier Logo" />
       </a>
       <div style="text-align: right;">
         <a href="checkout.html" style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em;">Checkout →</a>
