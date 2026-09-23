@@ -70,8 +70,8 @@
     header { position: sticky; top: 0; background: rgba(12, 10, 9, 0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border-subtle); z-index: 50; }
     .header-inner { max-width: 1380px; margin: auto; padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; }
     
-    .brand-logo { font-family: var(--font-serif); font-size: 26px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-main); display: flex; flex-direction: column; }
-    .brand-logo span { font-family: var(--font-sans); font-size: 9px; font-weight: 700; letter-spacing: 0.3em; color: var(--accent-gold); text-transform: uppercase; margin-top: -2px; }
+    .brand-logo { display: flex; align-items: center; gap: 12px; }
+    .brand-logo img { height: 42px; width: auto; object-fit: contain; }
 
     nav { display: flex; gap: 32px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; }
     nav a { color: var(--text-muted); transition: all 0.25s; padding: 4px 0; border-bottom: 2px solid transparent; }
@@ -216,9 +216,8 @@
   <!-- Header -->
   <header>
     <div class="header-inner">
-      <a href="index.html" class="brand-logo">
-        THEVANDOR
-        <span>Artisanal Luxury Atelier</span>
+      <a href="index.html" class="brand-logo" aria-label="THEVANDOR Home">
+        <img src="thevandor-logo.png" alt="THEVANDOR Luxury Atelier Logo" />
       </a>
       <nav>
         <a href="index.html#catalog" class="active">Collection</a>
