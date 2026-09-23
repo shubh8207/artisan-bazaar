@@ -35,7 +35,7 @@
   <link rel="canonical" href="https://thevandor.shop/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="logo-data.js"></script>
   <style>
     /* THEVANDOR MODERN LUXURY ATELIER DESIGN SYSTEM */
     :root {
@@ -217,7 +217,7 @@
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand-logo" aria-label="THEVANDOR Home">
-        <img src="thevandor-logo.png" alt="THEVANDOR Luxury Atelier Logo" />
+        <img src="thevandor-logo.png" id="mainHeaderLogo" onerror="if(typeof THEVANDOR_LOGO !== 'undefined') this.src=THEVANDOR_LOGO;" alt="THEVANDOR Luxury Atelier Logo" />
       </a>
       <nav>
         <a href="index.html#catalog" class="active">Collection</a>
